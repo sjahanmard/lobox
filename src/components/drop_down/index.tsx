@@ -1,9 +1,9 @@
 import { useCallback, useRef, useState } from "react";
 import { useTheme } from "react-jss";
-import { AppTheme } from "../../utils/types";
+import { AppTheme } from "../../utils/types/types";
 import { useStyles } from "./style";
 import { OptionsBox } from "./options_box";
-import { Events } from "../../utils/Events";
+import { Events } from "../../utils/functions/Events";
 import {
   ChevronDown as ChevronDownIcon,
   ChevronUp as ChevronUpIcon,

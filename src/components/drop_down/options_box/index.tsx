@@ -1,10 +1,10 @@
 import { useEffect, useRef } from "react";
 import { useTheme } from "react-jss";
-import { AppTheme } from "../../../utils/types";
+import { AppTheme } from "../../../utils/types/types";
 import { useStyles } from "./style";
 import { Check as CheckIcon } from "react-feather";
-import { Events } from "../../../utils/Events";
-import { useTransition } from "../../../utils/use_transition";
+import { Events } from "../../../utils/functions/Events";
+import { useTransition } from "../../../utils/hooks/use_transition";
 import classNames from "classnames";
 import { options } from "./mock_data";
 import { Props } from "./types";

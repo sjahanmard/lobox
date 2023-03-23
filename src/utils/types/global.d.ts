@@ -1,4 +1,4 @@
-import { theme } from "./theme_provider";
+import { theme } from "../theme/theme_provider";
 import { AppTheme } from "./types";
 
 declare global {
