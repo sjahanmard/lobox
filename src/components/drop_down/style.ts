@@ -16,7 +16,9 @@ export const useStyles = createUseStyles({
     paddingRight: 10,
     "&:focus": {
       boxShadow: ({ theme }) => "0px 0px 5px " + theme.colors.primary.main,
-      border: "unset",
+    },
+    "&:focus-visible": {
+      outline: "none",
     },
   },
   selectText: {
