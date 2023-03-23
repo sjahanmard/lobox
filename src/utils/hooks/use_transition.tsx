@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import { CSSProperties, useEffect, useState } from "react";
 
 export function useTransition(
   isMounted: boolean,
   delayTime: number,
-  styles?: { from: Record<string, any>; to: Record<string, any> }
+  styles?: { from: CSSProperties; to: CSSProperties }
 ) {
   const [shouldRender, setShouldRender] = useState(false);
 

@@ -8,13 +8,14 @@ import {
   ChevronDown as ChevronDownIcon,
   ChevronUp as ChevronUpIcon,
 } from "react-feather";
+import { useStylesTheme } from "../../utils/theme/use_styles_theme";
 
 export function DropDown() {
   const [submittedValue, setSubmittedValue] = useState<string>("");
   const [chosenValue, setChosenValue] = useState<string>("");
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const theme = useTheme<AppTheme>();
-  const classes = useStyles({ theme });
+  const classes = useStylesTheme(useStyles);
   const selectRef = useRef<HTMLDivElement>(null);
 
   const onChange = useCallback(

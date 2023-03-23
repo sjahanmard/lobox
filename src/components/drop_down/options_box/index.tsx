@@ -8,6 +8,7 @@ import { useTransition } from "../../../utils/hooks/use_transition";
 import classNames from "classnames";
 import { options } from "./mock_data";
 import { Props } from "./types";
+import { useStylesTheme } from "../../../utils/theme/use_styles_theme";
 
 export function OptionsBox({
   onChange,
@@ -17,7 +18,7 @@ export function OptionsBox({
   closeDropDown,
 }: Props) {
   const theme = useTheme<AppTheme>();
-  const classes = useStyles({ theme });
+  const classes = useStylesTheme(useStyles);
   const dropDownboxRef = useRef<HTMLDivElement>(null);
 
   const { item: _isOpen, styles: stylesIsOpen } = useTransition(isOpen, 200, {
