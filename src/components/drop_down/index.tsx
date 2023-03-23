@@ -50,7 +50,7 @@ export function DropDown() {
       <p className={classes.selectText}>{submittedValue}</p>
       <OptionsBox
         onChange={onChange}
-        onSubmitting={onSubmit}
+        onSubmit={onSubmit}
         isOpen={isOpen}
         closeDropDown={closeDropDown}
         chosenValue={chosenValue}

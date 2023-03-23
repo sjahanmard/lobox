@@ -12,7 +12,7 @@ import { Props } from "./types";
 
 export function OptionsBox({
   onChange,
-  onSubmitting,
+  onSubmit,
   isOpen,
   chosenValue,
   closeDropDown,
@@ -40,7 +40,7 @@ export function OptionsBox({
     }
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key !== "Enter") return;
-      onSubmitting();
+      onSubmit();
     }
 
     document.addEventListener("click", handleClick);
