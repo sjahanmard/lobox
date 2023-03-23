@@ -41,7 +41,6 @@ export function OptionsBox({
     function handleKeyDown(e: KeyboardEvent) {
       if (e.key !== "Enter") return;
       onSubmitting();
-      closeDropDown();
     }
 
     document.addEventListener("click", handleClick);

@@ -1,4 +1,4 @@
-import { useCallback, useState } from "react";
+import { useCallback, useRef, useState } from "react";
 import { useTheme } from "react-jss";
 import { AppTheme } from "../../utils/types";
 import { useStyles } from "./style";
@@ -15,6 +15,7 @@ export function DropDown() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const theme = useTheme<AppTheme>();
   const classes = useStyles({ theme });
+  const selectRef = useRef<HTMLDivElement>(null);
 
   const onChange = useCallback(
     (chosenOption: typeof chosenValue) => {
@@ -22,10 +23,6 @@ export function DropDown() {
     },
     [setChosenValue]
   );
-
-  const onSubmit = useCallback(() => {
-    setIsOpen(true);
-  }, [setSubmittedValue, chosenValue]);
 
   const openDropDown = useCallback(() => {
     setIsOpen(true);
@@ -35,6 +32,12 @@ export function DropDown() {
     setIsOpen(false);
   }, [setIsOpen]);
 
+  const onSubmit = useCallback(() => {
+    setSubmittedValue(chosenValue);
+    setIsOpen(false);
+    selectRef?.current?.blur();
+  }, [setSubmittedValue, chosenValue, setIsOpen]);
+
   return (
     <div
       className={classes.select}
@@ -42,6 +45,7 @@ export function DropDown() {
       onClick={Events.stopPropagation}
       onFocus={openDropDown}
       onBlur={closeDropDown}
+      ref={selectRef}
     >
       <p className={classes.selectText}>{submittedValue}</p>
       <OptionsBox
