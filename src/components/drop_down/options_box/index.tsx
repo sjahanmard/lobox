@@ -3,7 +3,6 @@ import { useTheme } from "react-jss";
 import { AppTheme } from "../../../utils/types";
 import { useStyles } from "./style";
 import { Check as CheckIcon } from "react-feather";
-import { consts } from "../../../utils/consts";
 import { Events } from "../../../utils/Events";
 import { useTransition } from "../../../utils/use_transition";
 import classNames from "classnames";
@@ -57,7 +56,6 @@ export function OptionsBox({
         <div className={classes.optionsOutterContainer}>
           <div
             className={classes.optionsContainer}
-            id={consts.ids["dropdown-select-courses"]}
             ref={dropDownboxRef}
             style={stylesIsOpen}
           >
