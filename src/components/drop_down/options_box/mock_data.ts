@@ -5,4 +5,9 @@ export const options = [
   "Sport",
   "Games",
   "Health",
-] as const;
+  "Another one",
+  "Hey there",
+  "What's up",
+  "More mock data",
+  "Even more",
+];
