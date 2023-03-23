@@ -49,7 +49,7 @@ export function OptionsBox({
       document.removeEventListener("click", handleClick);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [chosenValue, _isOpen]);
+  }, [onSubmit, _isOpen]);
 
   return (
     <>
